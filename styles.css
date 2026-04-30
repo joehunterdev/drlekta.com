@@ -161,6 +161,25 @@ h2 {
   filter: drop-shadow(0 0 60px rgba(255,255,255,0.06));
 }
 
+/* ---- VIDEO TEXT MASK ---- */
+.hero-text-wrap {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.hero-text-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  border-radius: 0;
+  opacity: 1;
+}
+
 /* ---- GLITCH EFFECT ---- */
 h1.glitch {
   font-family: var(--font-heading);
@@ -171,6 +190,7 @@ h1.glitch {
   color: var(--white);
 }
 
+/* GLITCH LINES — saved for later, re-enable by uncommenting
 h1.glitch::before,
 h1.glitch::after {
   content: attr(data-text);
@@ -197,6 +217,7 @@ h1.glitch::after {
   clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%);
   opacity: 0.7;
 }
+*/
 
 /* Glitch variants → assets/css/glitch-variants.css */
 
@@ -252,6 +273,37 @@ h1.glitch::after {
 .cta:hover {
   background: var(--white);
   color: var(--black);
+}
+
+/* =========================================
+   SECTION BACKGROUND VIDEO
+   ========================================= */
+.section-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* sections that host a background video need stacking context */
+.featured,
+.bio,
+.affiliates {
+  position: relative;
+  overflow: hidden;
+}
+
+/* keep content above the video layer */
+.featured .section-inner,
+.bio .section-inner,
+.affiliates .section-inner {
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================================
@@ -451,6 +503,108 @@ h1.glitch::after {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--grey-text);
+}
+
+/* =========================================
+   CUTOUT / PROFILE IMAGE CARD
+   ========================================= */
+.affiliate-card--cutout {
+  padding: 32px 36px 26px;
+  background: #0d0d0d;
+  min-width: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle grain texture overlay */
+.affiliate-card--cutout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* circle avatar cutout */
+.card-avatar {
+  position: relative;
+  z-index: 1;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 16px;
+  /* double-ring effect */
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 0 0 5px rgba(255,255,255,0.03),
+    0 8px 32px rgba(0,0,0,0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.affiliate-card--cutout:hover .card-avatar {
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.28),
+    0 0 0 5px rgba(255,255,255,0.06),
+    0 8px 40px rgba(0,0,0,0.7);
+}
+
+.card-avatar--sm {
+  width: 68px;
+  height: 68px;
+}
+
+/* logo / SVG variant — transparent bg, no circle clip, no image filters */
+.card-avatar--svg {
+  width: 90px;
+  height: 78px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.affiliate-card--cutout:hover .card-avatar--svg {
+  box-shadow: none;
+}
+
+.card-avatar--svg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.75;
+  transition: opacity 0.25s ease, transform 0.35s ease;
+}
+
+.affiliate-card--cutout:hover .card-avatar--svg svg {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+.card-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(20%) contrast(1.05);
+  opacity: 0.8;
+  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.35s ease;
+}
+
+.affiliate-card--cutout:hover .card-avatar img {
+  opacity: 1;
+  filter: grayscale(0%) contrast(1.05);
+  transform: scale(1.04);
+}
+
+/* text sits above the grain overlay */
+.affiliate-card--cutout .affiliate-name,
+.affiliate-card--cutout .affiliate-sub {
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================================

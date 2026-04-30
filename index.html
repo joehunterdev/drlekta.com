@@ -9,13 +9,51 @@
   <meta name="description" content="Dr Lekta is a UK underground hip-hop artist known for sharp lyricism, intricate wordplay, and a raw boom bap sound. Stream his latest releases on Spotify and Bandcamp.">
   <meta name="keywords" content="Dr Lekta, UK hip hop, underground rap, boom bap, lyrical rap, UK rapper, independent hip hop">
   <meta name="author" content="Dr Lekta">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://drlekta.com">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Dr Lekta | UK Underground Hip-Hop Artist">
   <meta property="og:description" content="Sharp lyricism. Raw boom bap. Gritty storytelling. Dr Lekta — UK underground hip-hop.">
-  <meta property="og:image" content="assets/img/logo-larger.jpg">
+  <meta property="og:image" content="https://drlekta.com/assets/img/example.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dr Lekta – UK Underground Hip-Hop Artist">
   <meta property="og:url" content="https://drlekta.com">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Dr Lekta">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dr Lekta | UK Underground Hip-Hop Artist">
+  <meta name="twitter:description" content="Sharp lyricism. Raw boom bap. Gritty storytelling. Dr Lekta — UK underground hip-hop.">
+  <meta name="twitter:image" content="https://drlekta.com/assets/img/example.png">
+  <meta name="twitter:image:alt" content="Dr Lekta – UK Underground Hip-Hop Artist">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Dr Lekta",
+    "url": "https://drlekta.com",
+    "image": "https://drlekta.com/assets/img/example.png",
+    "description": "Dr Lekta is a UK underground hip-hop artist known for sharp lyricism, intricate wordplay, and a raw boom bap sound.",
+    "genre": ["Hip-Hop", "Boom Bap", "Underground Rap"],
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "United Kingdom"
+    },
+    "sameAs": [
+      "https://open.spotify.com/artist/6hvGmFElbqUN22vo4gByUM",
+      "https://www.instagram.com/drlekta_hiphop/",
+      "https://drlekta.bandcamp.com/",
+      "https://www.reverbnation.com/drlekta",
+      "https://linktr.ee/drlekta1"
+    ]
+  }
+  </script>
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="assets/img/icon/favicon.ico">
@@ -64,7 +102,15 @@
     <section class="hero">
       <div class="hero-inner">
         <img src="assets/img/logo-larger.jpg" alt="Dr Lekta Logo" class="hero-logo">
-        <h1 class="glitch glitch--streak-pp" data-text="Dr Lekta">Dr Lekta</h1>
+        <div class="hero-text-wrap">
+          <h1 class="glitch" data-text="Dr Lekta">Dr Lekta</h1>
+          <video
+            class="hero-text-video"
+            data-src="assets/video/water-horizontal-green.mp4"
+            muted loop playsinline
+            aria-hidden="true">
+          </video>
+        </div>
         <p class="tagline">UK Underground Hip-Hop &nbsp;·&nbsp; Boom Bap &nbsp;·&nbsp; Lyrical</p>
         <a href="https://open.spotify.com/artist/6hvGmFElbqUN22vo4gByUM" target="_blank" rel="noopener" class="cta">Stream Now</a>
       </div>
@@ -72,6 +118,7 @@
 
     <!-- FEATURED RELEASE -->
     <section class="featured" id="music">
+      <video class="section-video-bg" data-src="assets/video/featured.mp4" muted loop playsinline aria-hidden="true"></video>
       <div class="section-inner">
         <p class="section-label" data-aos="fade-up">Latest Release</p>
         <h2 data-aos="fade-up" data-aos-delay="80">Featured</h2>
@@ -107,6 +154,7 @@
 
     <!-- BIO -->
     <section class="bio" id="about">
+      <video class="section-video-bg" data-src="assets/video/logo-text.mp4" muted loop playsinline aria-hidden="true"></video>
       <div class="section-inner section-inner--narrow">
         <p class="section-label" data-aos="fade-up">The Artist</p>
         <h2 data-aos="fade-up" data-aos-delay="80">About</h2>
@@ -149,6 +197,7 @@
 
     <!-- PRESS / REVIEWS -->
     <section class="affiliates" id="affiliates">
+      <video class="section-video-bg" data-src="assets/video/press.mp4" muted loop playsinline aria-hidden="true"></video>
       <div class="section-inner">
         <p class="section-label" data-aos="fade-up">As Seen On</p>
         <h2 data-aos="fade-up" data-aos-delay="80">Press &amp; Reviews</h2>
@@ -159,8 +208,11 @@
             <span class="affiliate-sub">Album Review — The Manuscript</span>
           </a>
 
-          <a href="https://www.wordplaymagazine.com/blog-1/2022/6/30/dr-lekta-ft-caine-pyrex-crit-keepers-album" target="_blank" rel="noopener" class="affiliate-card affiliate-card--photo" data-aos="fade-up" data-aos-delay="180">
-            <img src="assets/img/wordplay.gif" alt="Wordplay Magazine">
+          <a href="https://www.wordplaymagazine.com/blog-1/2022/6/30/dr-lekta-ft-caine-pyrex-crit-keepers-album" target="_blank" rel="noopener" class="affiliate-card affiliate-card--cutout" data-aos="fade-up" data-aos-delay="180">
+            <div class="card-avatar">
+              <img src="assets/img/wordplay.gif" alt="Wordplay Magazine">
+            </div>
+            <span class="affiliate-name">Wordplay</span>
             <span class="affiliate-sub">Album Review — Crit Keepers</span>
           </a>
 
@@ -180,14 +232,63 @@
         <h2 data-aos="fade-up" data-aos-delay="80">Crew</h2>
         <div class="affiliates-grid">
 
-          <a href="https://www.youtube.com/@RealRapFamily" target="_blank" rel="noopener" class="affiliate-card affiliate-card--photo" data-aos="fade-up-left" data-aos-delay="120">
-            <img src="assets/img/real-rap-family.jpg" alt="Real Rap Family">
+          <a href="https://www.youtube.com/@RealRapFamily" target="_blank" rel="noopener" class="affiliate-card affiliate-card--cutout" data-aos="fade-up-left" data-aos-delay="120">
+            <div class="card-avatar">
+              <img src="assets/img/real-rap-family.jpg" alt="Real Rap Family">
+            </div>
+            <span class="affiliate-name">Real Rap Family</span>
             <span class="affiliate-sub">Underground Hip-Hop Channel</span>
           </a>
 
-          <a href="https://www.instagram.com/essence_hiphop" target="_blank" rel="noopener" class="affiliate-card affiliate-card--photo" data-aos="fade-up" data-aos-delay="180">
-            <img src="assets/img/essence-logo.jpg" alt="Essence Hip-Hop">
+          <a href="https://www.instagram.com/essence_hiphop" target="_blank" rel="noopener" class="affiliate-card affiliate-card--cutout" data-aos="fade-up" data-aos-delay="180">
+            <div class="card-avatar">
+              <img src="assets/img/essence-logo.jpg" alt="Essence Hip-Hop">
+            </div>
+            <span class="affiliate-name">Essence</span>
             <span class="affiliate-sub">Essence Hip-Hop</span>
+          </a>
+
+          <a href="https://joehunter.es" target="_blank" rel="noopener" class="affiliate-card affiliate-card--cutout" data-aos="fade-up-right" data-aos-delay="240">
+            <div class="card-avatar card-avatar--svg" aria-label="Joe Hunter logo">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 180.78 154" aria-hidden="true">
+                <defs>
+                  <radialGradient id="jh-rg1" cx="65.29" cy="839.86" r="25.27" gradientTransform="translate(-1.1 -744.9) scale(1.01)" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.31" stop-color="#634c82"></stop>
+                    <stop offset="0.4" stop-color="#674f87"></stop>
+                    <stop offset="0.51" stop-color="#725796"></stop>
+                    <stop offset="0.64" stop-color="#8466af"></stop>
+                    <stop offset="0.76" stop-color="#9e79d1"></stop>
+                    <stop offset="0.81" stop-color="#a881df"></stop>
+                  </radialGradient>
+                  <radialGradient id="jh-rg2" cx="-18.25" cy="916.1" r="131.28" gradientTransform="translate(0 -741.25)" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#634c82"></stop>
+                    <stop offset="0.32" stop-color="#654d84"></stop>
+                    <stop offset="0.51" stop-color="#6b528d"></stop>
+                    <stop offset="0.66" stop-color="#755a9b"></stop>
+                    <stop offset="0.8" stop-color="#8465af"></stop>
+                    <stop offset="0.92" stop-color="#9774c8"></stop>
+                    <stop offset="1" stop-color="#a881df"></stop>
+                  </radialGradient>
+                </defs>
+                <g id="jh-j">
+                  <circle fill="url(#jh-rg1)" cx="62.85" cy="110.93" r="15"></circle>
+                  <polygon fill="#4a3664" points="76.41 108.21 53.57 95.79 53.74 5.21 76.57 17.63 76.41 108.21"></polygon>
+                  <polygon fill="#7a5ea8" points="75.9 17.69 53.54 5.21 79.82 1.54 102.61 13.94 75.9 17.69"></polygon>
+                  <path fill="#2e2047" d="M48.34,151.64l-22.79-12.4a31.93,31.93,0,0,1-5.77-4c-8.09-7-12.68-17.83-12.68-29.76,0-23.75,18-45.6,40-48.7l22.79,12.4c-22,3.1-39.95,25-40,48.71,0,11.92,4.6,22.76,12.68,29.75A31.93,31.93,0,0,0,48.34,151.64Z" transform="translate(-7.1 -1.73)"></path>
+                  <path fill="url(#jh-rg2)" d="M109.67,15.63l-.21,90.44c0,22.79-16.33,44.21-37,48.74-1,.21-1.93.39-2.88.52a34,34,0,0,1-27.24-7.7c-8.08-7-12.7-17.84-12.67-29.77,0-23.76,18-45.61,40-48.71V98.2c-7.21,1-13.06,8.16-13.08,16a12.52,12.52,0,0,0,4.15,9.72,10.93,10.93,0,0,0,8.86,2.53,4.68,4.68,0,0,0,1-.19c6.76-1.48,12.07-8.64,12.08-16.3l.17-90.45Z" transform="translate(-7.1 -1.73)"></path>
+                </g>
+                <g id="jh-h">
+                  <polygon fill="#4a3664" points="148.57 153.62 121.69 140.87 121.81 85.85 148.69 98.6 148.57 153.62"></polygon>
+                  <polygon fill="#4a3664" points="149.76 71.66 122.88 58.91 122.99 3.57 149.88 16.33 149.76 71.66"></polygon>
+                  <polygon fill="#7a5ea8" points="149.79 16.35 122.93 3.44 154.32 0 180.78 12.55 149.79 16.35"></polygon>
+                  <polygon fill="#7a5ea8" points="102.42 76.8 75.52 65.05 122.88 58.49 149.24 71.26 102.42 76.8"></polygon>
+                  <polygon fill="#3a2a55" points="102.57 105.21 75.57 93.31 75.63 64.99 102.57 76.87 102.57 105.21"></polygon>
+                  <polygon fill="url(#jh-rg2)" points="180.57 12.57 180.57 149.69 148.57 153.62 148.68 99.48 102.35 105.24 102.42 76.8 149.57 71.22 149.88 16.33 180.57 12.57"></polygon>
+                </g>
+              </svg>
+            </div>
+            <span class="affiliate-name">Joe Hunter</span>
+            <span class="affiliate-sub">Digital Creative</span>
           </a>
 
         </div>
@@ -206,12 +307,7 @@
         <a href="https://drlekta.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
       </p>
 
-      <p class="footer-dev" data-aos="fade-up" data-aos-delay="200">
-        <span>Developed by</span>
-        <a href="https://joehunter.es" target="_blank" rel="noopener" class="footer-dev-link">
-          <img src="assets/img/logo_75.png" alt="Joe Hunter" class="footer-dev-logo">
-        </a>
-      </p>
+
     </footer>
 
   </main>
@@ -224,6 +320,43 @@
       easing: 'ease-out-cubic',
       once: true,
       offset: 60
+    });
+  </script>
+
+  <!-- Deferred video load: runs after everything else is painted -->
+  <script>
+    window.addEventListener('load', function () {
+      // hero text video loads immediately
+      var hero = document.querySelector('.hero-text-video');
+      if (hero && hero.dataset.src) {
+        hero.src = hero.dataset.src;
+        hero.load();
+        hero.play().catch(function () {});
+      }
+
+      // section background videos load lazily as they enter the viewport
+      var bgVideos = document.querySelectorAll('.section-video-bg[data-src]');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var v = entry.target;
+              v.src = v.dataset.src;
+              v.load();
+              v.play().catch(function () {});
+              observer.unobserve(v);
+            }
+          });
+        }, { rootMargin: '200px' });
+        bgVideos.forEach(function (v) { observer.observe(v); });
+      } else {
+        // fallback: load all immediately
+        bgVideos.forEach(function (v) {
+          v.src = v.dataset.src;
+          v.load();
+          v.play().catch(function () {});
+        });
+      }
     });
   </script>
 </body>
