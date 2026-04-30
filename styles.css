@@ -178,9 +178,10 @@ h2 {
   pointer-events: none;
   border-radius: 0;
   opacity: 1;
+  z-index: 2;
 }
 
-/* ---- GLITCH EFFECT ---- */
+/* h1 is white so screen blend lets video colour show only through letter pixels */
 h1.glitch {
   font-family: var(--font-heading);
   font-size: clamp(3.5rem, 12vw, 8rem);
@@ -188,6 +189,7 @@ h1.glitch {
   line-height: 1;
   position: relative;
   color: var(--white);
+  z-index: 1;
 }
 
 /* GLITCH LINES — saved for later, re-enable by uncommenting
