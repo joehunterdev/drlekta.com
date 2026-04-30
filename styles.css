@@ -198,55 +198,7 @@ h1.glitch::after {
   opacity: 0.7;
 }
 
-/* -- Glitch colour variants -- */
-h1.glitch--purple::before {
-  color: #bf5fff;
-  opacity: 0.8;
-}
-
-h1.glitch--purple::after {
-  color: #ff4daa;
-  opacity: 0.8;
-}
-
-h1.glitch--mono::before {
-  color: #fff;
-  opacity: 0.5;
-}
-
-h1.glitch--mono::after {
-  color: #666;
-  opacity: 0.6;
-}
-
-h1.glitch--grey::before {
-  color: #aaa;
-  opacity: 0.55;
-}
-
-h1.glitch--grey::after {
-  color: #444;
-  opacity: 0.65;
-}
-
-/* -- Gradient cycling variant -- */
-h1.glitch--gradient {
-  background: linear-gradient(to right, #0ff, #f0f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: hue-cycle 10s linear infinite;
-}
-
-h1.glitch--gradient::before,
-h1.glitch--gradient::after {
-  display: none;
-}
-
-@keyframes hue-cycle {
-  from { filter: hue-rotate(0deg); }
-  to   { filter: hue-rotate(360deg); }
-}
+/* Glitch variants → assets/css/glitch-variants.css */
 
 @keyframes glitch-1 {
   0%   { transform: translate(0); }
