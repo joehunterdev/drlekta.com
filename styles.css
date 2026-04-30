@@ -166,6 +166,7 @@ h2 {
   position: relative;
   display: inline-block;
   line-height: 1;
+  overflow: hidden;
 }
 
 .hero-text-video {
@@ -181,7 +182,7 @@ h2 {
   z-index: 2;
 }
 
-/* h1 is white so screen blend lets video colour show only through letter pixels */
+/* h1 is white so multiply blend lets video colour show only through letter pixels */
 h1.glitch {
   font-family: var(--font-heading);
   font-size: clamp(3.5rem, 12vw, 8rem);
@@ -190,6 +191,12 @@ h1.glitch {
   position: relative;
   color: var(--white);
   z-index: 1;
+}
+
+/* suppress all glitch pseudo-element lines while video text effect is active */
+h1.glitch::before,
+h1.glitch::after {
+  display: none;
 }
 
 /* GLITCH LINES — saved for later, re-enable by uncommenting
