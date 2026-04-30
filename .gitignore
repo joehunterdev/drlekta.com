@@ -1,0 +1,13 @@
+# Private / docs
+.docs/
+*.private
+*.private.*
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor
+.vscode/
+*.code-workspace
