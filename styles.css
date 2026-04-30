@@ -403,6 +403,43 @@ h1.glitch::after {
   border-color: #555;
 }
 
+.affiliate-card--logo img {
+  max-width: 140px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.affiliate-card--logo:hover img {
+  opacity: 1;
+}
+
+.affiliate-card--photo img {
+  max-width: 140px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.affiliate-card--photo:hover img {
+  opacity: 1;
+}
+
+/* CREW */
+.crew {
+  background: var(--grey-dark);
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
 .affiliate-name {
   font-family: var(--font-heading);
   font-size: 1.3rem;
@@ -483,10 +520,10 @@ h1.glitch::after {
 }
 
 .footer-dev-logo {
-  width: 18px;
-  height: 18px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 0.2s ease;
 }
 
