@@ -3,6 +3,10 @@
 *.private
 *.private.*
 
+# Media assets (images & video — managed outside git)
+assets/img/
+assets/video/
+
 # OS
 Thumbs.db
 .DS_Store
