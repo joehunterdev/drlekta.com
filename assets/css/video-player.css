@@ -2,16 +2,34 @@
    Video Player — pay-homage-music-vid
    ============================================================ */
 
+/* ── Section heading ────────────────────────────────────────── */
+.vp-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.12em;
+  color: var(--white);
+  text-align: center;
+  margin: 48px 0 16px;
+  text-transform: uppercase;
+}
+
+/* ── Player article wrapper ─────────────────────────────────── */
+.inner-article--player {
+  padding-bottom: 0;
+  border-bottom: 1px solid #1a1a1a;
+  margin-bottom: 0;
+}
+
 .vp-wrap {
   position: relative;
   width: 100%;
-  max-width: 860px;
-  margin: 48px auto;
+  max-width: 1100px;
+  margin: 24px auto 0;
   aspect-ratio: 16 / 9;
   background: #000 url('/assets/img/pay-homage-album-cover.jpg') center center / cover no-repeat;
   overflow: hidden;
   border: 1px solid #1a1a1a;
-  cursor: none;
+  cursor: url('/assets/img/cursor-keys.png') 40 10, pointer;
 }
 
 /* ── Video ─────────────────────────────────────────────────── */
@@ -97,30 +115,4 @@
 .vp-wrap.is-playing .vp-play-btn {
   opacity: 0;
   pointer-events: none;
-}
-
-/* ── Custom screwdriver cursor ──────────────────────────────── */
-.vp-cursor {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  z-index: 10;
-  pointer-events: none;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  filter: drop-shadow(0 0 4px rgba(255,255,255,0.4));
-  transition: transform 0.08s linear;
-  display: none; /* shown via JS on mouseenter */
-}
-
-.vp-wrap:hover .vp-cursor {
-  display: block;
-}
-
-/* spin on hover near play button */
-.vp-wrap.cursor--near-btn .vp-cursor {
-  animation: screwSpin 0.6s linear infinite;
-}
-
-@keyframes screwSpin {
-  to { transform: translate(-50%, -50%) rotate(315deg); }
 }

@@ -1046,6 +1046,7 @@ h1.glitch::after {
   padding: 90px 20px 40px;
   background: var(--black);
   border-bottom: 1px solid #1a1a1a;
+  text-align: center;
 }
 
 .inner-hero-title {
@@ -1061,6 +1062,24 @@ h1.glitch::after {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--grey-text);
+}
+
+/* center all h2s in inner articles */
+.inner-article h2 {
+  text-align: center;
+}
+
+.inner-article blockquote {
+  border-left: 3px solid var(--white);
+  margin: 40px auto;
+  padding: 16px 24px;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-align: center;
+  max-width: 600px;
 }
 
 .inner-hero .section-label a {
