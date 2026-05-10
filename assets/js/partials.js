@@ -55,5 +55,15 @@
     });
 
     loadPartial('[data-partial="footer"]', '/template/partial/footer.html', null);
+
+    // Generic loader for any other data-partial placeholders
+    document.querySelectorAll('[data-partial]').forEach(function (el) {
+      var name = el.getAttribute('data-partial');
+      if (name === 'nav' || name === 'footer') return; // already handled above
+      fetch('/template/partial/' + name + '.html')
+        .then(function (r) { return r.text(); })
+        .then(function (html) { el.outerHTML = html; })
+        .catch(function (e) { console.warn('Partial load failed:', name, e); });
+    });
   });
 })();

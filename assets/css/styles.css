@@ -130,6 +130,12 @@
   overflow-x: clip;
 }
 
+/* subtle grey divider between every section */
+.site-main > section {
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
 @media (max-width: 600px) {
   .nav-toggle {
     display: flex;
@@ -316,7 +322,7 @@ section {
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--grey-text);
+  color: var(--white);
   margin-bottom: 8px;
 }
 
@@ -332,11 +338,11 @@ h2 {
    HERO
    ========================================= */
 .hero {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 120px 20px 40px;
   background: var(--black);
   position: relative;
 }
@@ -357,6 +363,14 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+}
+
+.hero-inner .cta-row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-logo {
@@ -389,7 +403,7 @@ h2 {
 /* h1 is white so multiply blend lets video colour show only through letter pixels */
 h1.glitch {
   font-family: var(--font-heading);
-  font-size: clamp(3.5rem, 12vw, 8rem);
+  font-size: clamp(4.5rem, 15vw, 10.4rem);
   letter-spacing: 0.06em;
   line-height: 1;
   position: relative;
@@ -474,6 +488,7 @@ h1.glitch::after {
   margin-top: 12px;
   padding: 13px 36px;
   border: 1px solid var(--white);
+  background: var(--black);
   color: var(--white);
   font-family: var(--font-body);
   font-size: 0.8rem;
@@ -559,16 +574,16 @@ h1.glitch::after {
 .btn-outline {
   display: inline-block;
   padding: 11px 28px;
-  border: 1px solid #444;
+  border: 1px solid var(--white);
+  background: var(--black);
   color: var(--white);
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .btn-outline:hover {
-  border-color: var(--white);
   background: var(--white);
   color: var(--black);
 }
@@ -618,7 +633,8 @@ h1.glitch::after {
   align-items: center;
   gap: 8px;
   padding: 11px 24px;
-  border: 1px solid #333;
+  border: 1px solid var(--white);
+  background: var(--black);
   font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -627,7 +643,6 @@ h1.glitch::after {
 }
 
 .link-pill:hover {
-  border-color: var(--white);
   background: var(--white);
   color: var(--black);
 }
@@ -913,6 +928,17 @@ h1.glitch::after {
   transform: scale(1.04);
 }
 
+/* Joe Hunter PNG logo — contain so it stays crisp */
+.affiliate-card--cutout .card-avatar img[src*="logo_joe_hunter"] {
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+}
+
 /* text sits above the grain overlay */
 .affiliate-card--cutout .affiliate-name,
 .affiliate-card--cutout .affiliate-sub {
@@ -1100,11 +1126,11 @@ h1.glitch::after {
   align-items: center;
   gap: 12px;
   font-size: 0.78rem;
-  color: #555;
+  color: var(--white);
 }
 
 .footer-links-row a {
-  color: #555;
+  color: var(--white);
   transition: color 0.2s ease;
 }
 
@@ -1113,15 +1139,21 @@ h1.glitch::after {
 }
 
 .footer-dev {
-  margin-top: 24px;
+  margin-top: 16px;
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  color: #888;
+}
+
+.footer-dev-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-dev-link:hover {
+  color: var(--white);
 }
 
 .footer-dev-link {
@@ -1192,6 +1224,12 @@ h1.glitch::after {
 }
 
 /* video opacity — full color for video bg sections */
-[data-video-bg] .section-video-bg {
+[data-video-bg] .section-video-bg,
+[data-video-bg-flip] .section-video-bg {
   opacity: 1;
+}
+
+/* flip the video vertically — add data-video-bg-flip to the section */
+[data-video-bg-flip] .section-video-bg {
+  transform: scaleY(-1);
 }
