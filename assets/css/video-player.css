@@ -70,7 +70,7 @@
 }
 
 .vp-bars--lighten {
-  filter: brightness(5) contrast(0.7) saturate(0);
+  filter: brightness(8) saturate(0) contrast(0.5);
 }
 
 .vp-wrap.is-playing .vp-bars {
