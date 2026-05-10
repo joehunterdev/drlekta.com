@@ -83,29 +83,13 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/glitch-variants.css">
 </head>
 <body class="page--home">
 
   <!-- ========== SITE NAV ========== -->
-  <nav class="site-nav" id="site-nav">
-    <a href="/" class="nav-logo" aria-label="Dr Lekta Home">
-      <img src="assets/img/logo.jpg" alt="Dr Lekta">
-    </a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="/" class="nav-link nav-link--active">Home</a></li>
-      <li class="nav-item--has-dropdown">
-        <a href="/blog/" class="nav-link">Blog</a>
-        <ul class="nav-dropdown">
-          <li><a href="/blog/pay-homage/">Pay Homage</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+  <div data-partial="nav"></div>
 
   <!-- ========== INTRO SPLASH ========== -->
   <div class="intro-overlay" id="intro">
@@ -120,7 +104,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-inner">
-        <img src="assets/img/logo-larger.jpg" alt="Dr Lekta Logo" class="hero-logo">
+        <!-- <img src="assets/img/logo-larger.jpg" alt="Dr Lekta Logo" class="hero-logo"> -->
         <div class="hero-text-wrap">
           <h1 class="glitch" data-text="Dr Lekta">Dr Lekta</h1>
           <video
@@ -132,12 +116,13 @@
         </div>
         <p class="tagline">UK Underground Hip-Hop &nbsp;·&nbsp; Boom Bap &nbsp;·&nbsp; Lyrical</p>
         <a href="https://open.spotify.com/artist/6hvGmFElbqUN22vo4gByUM" target="_blank" rel="noopener" class="cta">Stream Now</a>
+        <a href="https://open.spotify.com/artist/6hvGmFElbqUN22vo4gByUM" target="_blank" rel="noopener" class="cta">Pay Homage Essay</a>
+
       </div>
     </section>
 
     <!-- FEATURED RELEASE -->
-    <section class="featured" id="music">
-      <video class="section-video-bg" data-src="assets/video/featured.mp4" muted loop playsinline aria-hidden="true"></video>
+    <section class="featured" id="music" data-video-bg="assets/video/featured.mp4">
       <div class="section-inner">
         <p class="section-label" data-aos="fade-up">Latest Release</p>
         <h2 data-aos="fade-up" data-aos-delay="80">Featured</h2>
@@ -186,7 +171,7 @@
     </section>
 
     <!-- LINKS / CONNECT -->
-    <section class="connect" id="links">
+    <section class="connect" id="links" data-video-bg="assets/video/featured.mp4">
       <div class="section-inner">
         <p class="section-label" data-aos="fade-up">Stay Connected</p>
         <h2 data-aos="fade-up" data-aos-delay="80">Follow</h2>
@@ -214,29 +199,37 @@
     </section>
 
     <!-- PRESS / REVIEWS -->
-    <section class="affiliates" id="affiliates">
-      <video class="section-video-bg" data-src="assets/video/press.mp4" muted loop playsinline aria-hidden="true"></video>
+    <section class="affiliates" id="affiliates" data-video-bg="assets/video/press.mp4"></video>
       <div class="section-inner">
         <p class="section-label" data-aos="fade-up">As Seen On</p>
         <h2 data-aos="fade-up" data-aos-delay="80">Press &amp; Reviews</h2>
         <div class="affiliates-grid">
 
-          <a href="https://musicreviewworld.com/dr-lekta-the-manuscript-album-review/" target="_blank" rel="noopener" class="affiliate-card affiliate-card--logo" data-aos="fade-up-left" data-aos-delay="120">
-            <img src="assets/img/world-review.webp" alt="Music Review World">
-            <span class="affiliate-sub">Album Review — The Manuscript</span>
+          <a href="https://musicreviewworld.com/dr-lekta-the-manuscript-album-review/" target="_blank" rel="noopener" class="feature-card" data-aos="fade-up-left" data-aos-delay="120">
+            <div class="card-avatar">
+              <img src="assets/img/world-review.webp" alt="Music Review World">
+            </div>
+            <span class="feature-card__label">Album Review</span>
+            <span class="feature-card__title">Music Review World</span>
+            <p class="feature-card__body">The Manuscript</p>
           </a>
 
-          <a href="https://www.wordplaymagazine.com/blog-1/2022/6/30/dr-lekta-ft-caine-pyrex-crit-keepers-album" target="_blank" rel="noopener" class="affiliate-card affiliate-card--cutout" data-aos="fade-up" data-aos-delay="180">
+          <a href="https://www.wordplaymagazine.com/blog-1/2022/6/30/dr-lekta-ft-caine-pyrex-crit-keepers-album" target="_blank" rel="noopener" class="feature-card" data-aos="fade-up" data-aos-delay="180">
             <div class="card-avatar">
               <img src="assets/img/wordplay.gif" alt="Wordplay Magazine">
             </div>
-            <span class="affiliate-name">Wordplay</span>
-            <span class="affiliate-sub">Album Review — Crit Keepers</span>
+            <span class="feature-card__label">Album Review</span>
+            <span class="feature-card__title">Wordplay</span>
+            <p class="feature-card__body">Crit Keepers</p>
           </a>
 
-          <a href="https://www.rapnerd.com/post/dr-lekta-flowers-for-the-illest-rap-nerd-reviews" target="_blank" rel="noopener" class="affiliate-card" data-aos="fade-up-right" data-aos-delay="120">
-            <span class="affiliate-name">Rap Nerd</span>
-            <span class="affiliate-sub">Review — Flowers for the Illest</span>
+          <a href="https://www.rapnerd.com/post/dr-lekta-flowers-for-the-illest-rap-nerd-reviews" target="_blank" rel="noopener" class="feature-card" data-aos="fade-up-right" data-aos-delay="240">
+            <div class="card-avatar">
+              <img src="assets/img/rap-nerd-radio.png" alt="Rap Nerd">
+            </div>
+            <span class="feature-card__label">Album Review</span>
+            <span class="feature-card__title">Rap Nerd</span>
+            <p class="feature-card__body">Flowers for the Illest</p>
           </a>
 
         </div>
@@ -244,7 +237,7 @@
     </section>
 
     <!-- CREW -->
-    <section class="crew" id="crew">
+    <section class="crew" id="crew" data-video-bg="assets/video/press.mp4">
       <div class="section-inner">
         <p class="section-label" data-aos="fade-up">The Network</p>
         <h2 data-aos="fade-up" data-aos-delay="80">Crew</h2>
@@ -306,36 +299,11 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
-      <img src="assets/img/logo.jpg" alt="Dr Lekta" class="footer-logo" data-aos="fade-up">
-      <p class="footer-copy" data-aos="fade-up" data-aos-delay="80">&copy; 2026 Dr Lekta. All rights reserved.</p>
-      <p class="footer-links-row" data-aos="fade-up" data-aos-delay="140">
-        <a href="https://open.spotify.com/artist/6hvGmFElbqUN22vo4gByUM" target="_blank" rel="noopener">Spotify</a>
-        <span>·</span>
-        <a href="https://www.instagram.com/drlekta_hiphop/" target="_blank" rel="noopener">Instagram</a>
-        <span>·</span>
-        <a href="https://drlekta.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
-      </p>
-
-
-    </footer>
+    <div data-partial="footer"></div>
 
   </main>
 
-  <!-- Nav toggle -->
-  <script>
-    (function () {
-      var toggle = document.getElementById('nav-toggle');
-      var links  = document.getElementById('nav-links');
-      if (toggle && links) {
-        toggle.addEventListener('click', function () {
-          var open = links.classList.toggle('is-open');
-          toggle.classList.toggle('is-open', open);
-          toggle.setAttribute('aria-expanded', open);
-        });
-      }
-    })();
-  </script>
+  <script src="/assets/js/partials.js"></script>
 
   <!-- AOS Init -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -351,36 +319,51 @@
   <!-- Deferred video load: runs after everything else is painted -->
   <script>
     window.addEventListener('load', function () {
-      // hero text video loads immediately
-      var hero = document.querySelector('.hero-text-video');
-      if (hero && hero.dataset.src) {
-        hero.src = hero.dataset.src;
-        hero.load();
-        hero.play().catch(function () {});
+      function startVideo(v) {
+        v.setAttribute('autoplay', '');
+        v.muted = true;
+        v.src = v.dataset.src;
+        v.load();
+        var p = v.play();
+        if (p !== undefined) p.catch(function () {});
       }
 
-      // section background videos load lazily as they enter the viewport
-      var bgVideos = document.querySelectorAll('.section-video-bg[data-src]');
+      // hero text video — load right away
+      var hero = document.querySelector('.hero-text-video');
+      if (hero && hero.dataset.src) startVideo(hero);
+
+      // section background videos — injected from data-video-bg and lazy loaded
+      var bgSections = document.querySelectorAll('[data-video-bg]');
+
+      function injectAndStart(section) {
+        var src = section.dataset.videoBg;
+        var v = document.createElement('video');
+        v.className = 'section-video-bg';
+        v.setAttribute('muted', '');
+        v.setAttribute('loop', '');
+        v.setAttribute('playsinline', '');
+        v.setAttribute('aria-hidden', 'true');
+        section.insertBefore(v, section.firstChild);
+        v.muted = true;
+        v.setAttribute('autoplay', '');
+        v.src = src;
+        v.load();
+        var p = v.play();
+        if (p !== undefined) p.catch(function () {});
+      }
+
       if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function (entries) {
+        var bgObserver = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              var v = entry.target;
-              v.src = v.dataset.src;
-              v.load();
-              v.play().catch(function () {});
-              observer.unobserve(v);
+              injectAndStart(entry.target);
+              bgObserver.unobserve(entry.target);
             }
           });
-        }, { rootMargin: '200px' });
-        bgVideos.forEach(function (v) { observer.observe(v); });
+        }, { rootMargin: '400px' });
+        bgSections.forEach(function (s) { bgObserver.observe(s); });
       } else {
-        // fallback: load all immediately
-        bgVideos.forEach(function (v) {
-          v.src = v.dataset.src;
-          v.load();
-          v.play().catch(function () {});
-        });
+        bgSections.forEach(injectAndStart);
       }
     });
   </script>

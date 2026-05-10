@@ -34,24 +34,7 @@
 </head>
 <body class="page--inner">
 
-  <!-- NAV -->
-  <nav class="site-nav" id="site-nav">
-    <a href="/" class="nav-logo" aria-label="Dr Lekta Home">
-      <img src="../assets/img/logo.jpg" alt="Dr Lekta">
-    </a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="/" class="nav-link">Home</a></li>
-      <li class="nav-item--has-dropdown">
-        <a href="/blog/" class="nav-link nav-link--active">Blog</a>
-        <ul class="nav-dropdown">
-          <li><a href="/blog/pay-homage/">Pay Homage</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+  <div data-partial="nav"></div>
 
   <main class="site-main">
 
@@ -80,34 +63,11 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <img src="../assets/img/logo.jpg" alt="Dr Lekta" class="footer-logo">
-      <p class="footer-copy">&copy; 2026 Dr Lekta. All rights reserved.</p>
-      <p class="footer-links-row">
-        <a href="https://open.spotify.com/artist/6hvGmFElbqUN22vo4gByUM" target="_blank" rel="noopener">Spotify</a>
-        <span>·</span>
-        <a href="https://www.instagram.com/drlekta_hiphop/" target="_blank" rel="noopener">Instagram</a>
-        <span>·</span>
-        <a href="https://drlekta.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
-      </p>
-    </footer>
+    <div data-partial="footer"></div>
 
   </main>
 
-  <script>
-    (function () {
-      var toggle = document.getElementById('nav-toggle');
-      var links  = document.getElementById('nav-links');
-      if (toggle && links) {
-        toggle.addEventListener('click', function () {
-          var open = links.classList.toggle('is-open');
-          toggle.classList.toggle('is-open', open);
-          toggle.setAttribute('aria-expanded', open);
-        });
-      }
-    })();
-  </script>
+  <script src="/assets/js/partials.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });</script>
 </body>

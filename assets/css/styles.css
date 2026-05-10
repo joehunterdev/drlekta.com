@@ -506,9 +506,7 @@ h1.glitch::after {
 /* sections that host a background video need stacking context */
 .featured,
 .bio,
-.affiliates,
-.connect,
-.crew {
+.affiliates {
   position: relative;
   overflow: hidden;
 }
@@ -516,9 +514,7 @@ h1.glitch::after {
 /* keep content above the video layer */
 .featured .section-inner,
 .bio .section-inner,
-.affiliates .section-inner,
-.connect .section-inner,
-.crew .section-inner {
+.affiliates .section-inner {
   position: relative;
   z-index: 1;
 }
@@ -654,10 +650,10 @@ h1.glitch::after {
 }
 
 .affiliates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 20px;
-  justify-items: stretch;
+  flex-wrap: wrap;
 }
 
 .affiliate-card {
@@ -745,7 +741,6 @@ h1.glitch::after {
   position: relative;
   overflow: hidden;
   transition: border-color 0.2s ease;
-  width: 100%;
 }
 
 .feature-card:hover {
@@ -767,28 +762,6 @@ h1.glitch::after {
 .feature-card > * {
   position: relative;
   z-index: 1;
-}
-
-/* avatar inside feature-card */
-.feature-card .card-avatar {
-  margin-bottom: 12px;
-}
-
-.feature-card .card-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  filter: grayscale(20%) contrast(1.05);
-  opacity: 0.8;
-  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.35s ease;
-}
-
-.feature-card:hover .card-avatar img {
-  opacity: 1;
-  filter: grayscale(0%) contrast(1.05);
-  transform: scale(1.04);
 }
 
 .feature-card__label {
@@ -1117,7 +1090,7 @@ h1.glitch::after {
 
 .footer-copy {
   font-size: 0.78rem;
-  color: #888;
+  color: #444;
   margin-bottom: 10px;
 }
 
@@ -1127,11 +1100,11 @@ h1.glitch::after {
   align-items: center;
   gap: 12px;
   font-size: 0.78rem;
-  color: #aaa;
+  color: #555;
 }
 
 .footer-links-row a {
-  color: #aaa;
+  color: #555;
   transition: color 0.2s ease;
 }
 
