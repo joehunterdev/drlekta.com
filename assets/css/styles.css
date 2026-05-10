@@ -1166,3 +1166,32 @@ h1.glitch::after {
     align-items: center;
   }
 }
+
+/* =========================================
+   VIDEO BACKGROUND SECTIONS — OVERRIDES
+   Make section backgrounds transparent so
+   the injected section-video-bg shows through
+   ========================================= */
+[data-video-bg].featured,
+[data-video-bg].connect,
+[data-video-bg].crew {
+  background: transparent;
+}
+
+/* sections that host a background video need stacking context */
+[data-video-bg].connect,
+[data-video-bg].crew {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-video-bg].connect .section-inner,
+[data-video-bg].crew .section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* video opacity — full color for video bg sections */
+[data-video-bg] .section-video-bg {
+  opacity: 1;
+}
