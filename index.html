@@ -86,7 +86,26 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="assets/css/glitch-variants.css">
 </head>
-<body>
+<body class="page--home">
+
+  <!-- ========== SITE NAV ========== -->
+  <nav class="site-nav" id="site-nav">
+    <a href="/" class="nav-logo" aria-label="Dr Lekta Home">
+      <img src="assets/img/logo.jpg" alt="Dr Lekta">
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/" class="nav-link nav-link--active">Home</a></li>
+      <li class="nav-item--has-dropdown">
+        <a href="/blog/" class="nav-link">Blog</a>
+        <ul class="nav-dropdown">
+          <li><a href="/blog/pay-homage/">Pay Homage</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
   <!-- ========== INTRO SPLASH ========== -->
   <div class="intro-overlay" id="intro">
@@ -302,6 +321,21 @@
     </footer>
 
   </main>
+
+  <!-- Nav toggle -->
+  <script>
+    (function () {
+      var toggle = document.getElementById('nav-toggle');
+      var links  = document.getElementById('nav-links');
+      if (toggle && links) {
+        toggle.addEventListener('click', function () {
+          var open = links.classList.toggle('is-open');
+          toggle.classList.toggle('is-open', open);
+          toggle.setAttribute('aria-expanded', open);
+        });
+      }
+    })();
+  </script>
 
   <!-- AOS Init -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
