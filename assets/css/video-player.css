@@ -4,7 +4,6 @@
 
 /* ── Section heading ────────────────────────────────────────── */
 .vp-heading {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   letter-spacing: 0.12em;
   color: var(--white);
@@ -32,6 +31,21 @@
   cursor: url('/assets/img/cursor-keys.png') 40 10, pointer;
 }
 
+/* Dark overlay on thumbnail — add .vp-wrap--dimmed to enable */
+.vp-wrap--dimmed::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  z-index: 3;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.vp-wrap--dimmed.is-playing::before {
+  opacity: 0;
+}
+
 /* ── Video ─────────────────────────────────────────────────── */
 .vp-video {
   position: absolute;
@@ -39,7 +53,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: 2;
   opacity: 1;
 }
 
@@ -50,13 +64,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 2;
+  z-index: 4;
   pointer-events: none;
   opacity: 1;
- }
+}
 
 .vp-bars--lighten {
-  filter: brightness(1.4) contrast(1.1);
+  filter: brightness(5) contrast(0.7) saturate(0);
 }
 
 .vp-wrap.is-playing .vp-bars {

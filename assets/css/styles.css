@@ -241,7 +241,7 @@
 h1.font-bomb,
 h2.font-bomb,
 h3.font-bomb {
-  font-family: 'BombFont', 'Bebas Neue', Impact, sans-serif;
+  font-family: 'BombFont', 'Bebas Neue', Impact, sans-serif !important;
 }
 
 :root {

@@ -3,7 +3,7 @@
    ============================================================ */
 
 /* ── AOS ──────────────────────────────────────────────────── */
-window.addEventListener('DOMContentLoaded', function () {
+function initAOS() {
   if (typeof AOS !== 'undefined') {
     AOS.init({
       duration: 700,
@@ -11,6 +11,15 @@ window.addEventListener('DOMContentLoaded', function () {
       once: true,
       offset: 60
     });
+  }
+}
+
+window.addEventListener('DOMContentLoaded', initAOS);
+
+// Re-run after partials are injected so AOS picks up partial elements
+window.addEventListener('partials:ready', function () {
+  if (typeof AOS !== 'undefined') {
+    AOS.refreshHard();
   }
 });
 
