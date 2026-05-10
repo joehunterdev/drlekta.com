@@ -1,0 +1,24 @@
+/* ============================================================
+   fonts.css — custom typeface declarations
+   All font files live in /assets/fonts/
+   ============================================================ */
+
+@font-face {
+  font-family: 'Bomb';
+  src:
+    url('/assets/fonts/Bomb.woff2') format('woff2'),
+    url('/assets/fonts/Bomb.woff')  format('woff'),
+    url('/assets/fonts/Bomb.ttf')   format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* prevents FOIT, uses fallback until loaded */
+}
+
+/* ── Utility class ────────────────────────────────────────── */
+/* Apply .font-bomb to any element to use the Bomb typeface   */
+.font-bomb,
+h1.font-bomb,
+h2.font-bomb,
+h3.font-bomb {
+  font-family: 'Bomb', 'Bebas Neue', sans-serif;
+}

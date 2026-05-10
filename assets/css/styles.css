@@ -225,6 +225,25 @@
   box-sizing: border-box;
 }
 
+/* =========================================
+   CUSTOM FONTS
+   ========================================= */
+@font-face {
+  font-family: 'BombFont';
+  src: url('/assets/fonts/bombfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply Bomb Font to any element via class */
+.font-bomb,
+h1.font-bomb,
+h2.font-bomb,
+h3.font-bomb {
+  font-family: 'BombFont', 'Bebas Neue', Impact, sans-serif;
+}
+
 :root {
   --black: #000;
   --white: #fff;
@@ -233,6 +252,7 @@
   --grey-text: #999;
   --accent: #fff;
   --font-heading: 'Bebas Neue', Impact, sans-serif;
+  --font-bomb: 'BombFont', 'Bebas Neue', Impact, sans-serif;
   --font-body: 'Inter', Arial, sans-serif;
 }
 
