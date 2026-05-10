@@ -17,3 +17,6 @@ heres the content to add must all be seo friendly
 E:\www\drlekta.com\.docs\blog-pay-homage.md
 
 so the aim now is to create sub pages for better seo and content releases. 
+
+## Player 
+so i want a feature that plays a video the video to load is pay-homage-music-vid. But i would like some rich design features. So use a html 5 video player, but overlay the image bars-4 png. Then we will use the cursor to trigger the play button hovering and clicking over the center of the image. There will be a text overlay top right also saying "unlock the bars" and a custom cursor that is a screw driver This will be video player partial. WE can add it to the pay-homage page 

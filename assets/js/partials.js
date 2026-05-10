@@ -57,13 +57,33 @@
     loadPartial('[data-partial="footer"]', '/template/partial/footer.html', null);
 
     // Generic loader for any other data-partial placeholders
-    document.querySelectorAll('[data-partial]').forEach(function (el) {
+    // Generic loader for any other data-partial placeholders
+    var genericPartials = Array.from(document.querySelectorAll('[data-partial]')).filter(function (el) {
       var name = el.getAttribute('data-partial');
-      if (name === 'nav' || name === 'footer') return; // already handled above
+      return name !== 'nav' && name !== 'footer';
+    });
+
+    var pending = genericPartials.length;
+
+    if (pending === 0) {
+      document.dispatchEvent(new Event('partials:ready'));
+      return;
+    }
+
+    genericPartials.forEach(function (el) {
+      var name = el.getAttribute('data-partial');
       fetch('/template/partial/' + name + '.html')
         .then(function (r) { return r.text(); })
-        .then(function (html) { el.outerHTML = html; })
-        .catch(function (e) { console.warn('Partial load failed:', name, e); });
+        .then(function (html) {
+          el.outerHTML = html;
+          pending--;
+          if (pending === 0) document.dispatchEvent(new Event('partials:ready'));
+        })
+        .catch(function (e) {
+          console.warn('Partial load failed:', name, e);
+          pending--;
+          if (pending === 0) document.dispatchEvent(new Event('partials:ready'));
+        });
     });
   });
 })();

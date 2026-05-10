@@ -28,6 +28,14 @@
   transition: opacity 0.2s ease;
 }
 
+.nav-logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  line-height: 1;
+}
+
 .nav-logo:hover img {
   opacity: 1;
 }

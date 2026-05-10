@@ -40,8 +40,8 @@
   </script>
 
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="../../assets/img/icon/favicon.ico">
-  <link rel="apple-touch-icon" href="../../assets/img/icon/apple-icon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/img/icon/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/img/icon/apple-icon.png">
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +53,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/video-player.css">
 </head>
 <body class="page--inner">
 
@@ -68,7 +69,15 @@
         <p class="inner-hero-meta">By Dr Lekta &nbsp;·&nbsp; May 2026</p>
       </div>
     </section>
+    <article class="inner-article">
+              <!-- VIDEO PLAYER -->
+        <div data-partial="video-player"></div>
 
+        <div class="article-back" data-aos="fade-up">
+          <a href="/blog/" class="btn-outline">← Back to Blog</a>
+        </div>
+
+    </article>
     <!-- ARTICLE BODY -->
     <article class="inner-article">
       <div class="section-inner section-inner--narrow">
@@ -115,9 +124,6 @@
           Pay homage. Know the roots. Build from there.
         </p>
 
-        <div class="article-back" data-aos="fade-up">
-          <a href="/blog/" class="btn-outline">← Back to Blog</a>
-        </div>
 
       </div>
     </article>
@@ -129,5 +135,6 @@
   <script src="/assets/js/partials.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/video-player.js"></script>
 </body>
 </html>
