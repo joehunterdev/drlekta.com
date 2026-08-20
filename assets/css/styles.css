@@ -375,6 +375,14 @@ h2 {
   position: relative;
 }
 
+/* desktop: hug the content instead of stretching to 70vh */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 0;
+    padding-bottom: 64px;
+  }
+}
+
 .hero::after {
   content: '';
   position: absolute;
