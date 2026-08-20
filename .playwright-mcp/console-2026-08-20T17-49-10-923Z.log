@@ -1,0 +1,19 @@
+[   13192ms] [LOG] 19:49:24.113: ErrorCollector: enabled @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13193ms] [LOG] 19:49:24.115: Capabilities: registered test hasSVG; classname=has-svg @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13193ms] [LOG] 19:49:24.116: Capabilities: registered test hasCSSOM; classname=has-cssom @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13193ms] [LOG] 19:49:24.116: Capabilities: registered test hasHover; classname=has-hover @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13194ms] [LOG] 19:49:24.116: Capabilities: registered test hasTouch; classname=no-touch @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13194ms] [LOG] 19:49:24.116: Capabilities: registered test hasAnimation; classname=has-anim @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13198ms] [LOG] 19:49:24.121: hiding params [action, buy_id, no, permalink, from, pk, recipient, fan_id, showvid, label, tab, filter_band, campaign, newsletter_id, newsletter_sig, entry_type, entity_id, toast, toastref, toastband, search_page_id, search_page_no, search_rank, search_match_part, search_item_type, search_item_id, search_sig, logged_out_menubar, logged_in_menubar, logged_in_mobile_menubar, logged_out_mobile_menubar, corp_header, .reload, mvp] from url query @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13342ms] [LOG] 19:49:24.264: bcTruncate 1 (61ms; total: 61ms):  JSHandle@node @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13706ms] [INFO] user not opted in: skipping Tracker record. @ https://s4.bcbits.com/client-bundle/1/Tracker_1/impl-05e338cc954624baf8c842fdb2eeb8a7.js:0
+[   13736ms] [LOG] 19:49:24.658: initializing notifications @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13766ms] [LOG] 19:49:24.689: hiding params [launch_edit_design] from url query @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13767ms] [LOG] 19:49:24.690: bind tos banner @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13768ms] [INFO] CookieComm started listening @ https://s4.bcbits.com/client-bundle/1/BCCookies_1/bccookies-1b16a61d7d84327a3d9f6a53238b3bc9.js:0
+[   13800ms] [LOG] 19:49:24.723: reading/clearing playlist state @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13822ms] [LOG] 19:49:24.744: hiding params [external_follow] from url query @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13837ms] [LOG] 19:49:24.759: bcTruncate 2 (deferred; 0ms; total: 61ms):  JSHandle@node @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13839ms] [LOG] 19:49:24.761: bcTruncate 3 (deferred; 0ms; total: 61ms):  JSHandle@node @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   13840ms] [LOG] 19:49:24.762: bcTruncate 4 (deferred; 0ms; total: 61ms):  JSHandle@node @ https://s4.bcbits.com/client-bundle/1/trackpipe/global_head-94c8b8008e093eee0f8077ab3907b87e.js:0
+[   25634ms] [ERROR] Failed to load resource: the server responded with a status of 429 () @ https://o363271.ingest.us.sentry.io/api/4508223638732800/envelope/?sentry_version=7&sentry_key=7c33659f530ef43fb4532fc6e83354dd&sentry_client=sentry.javascript.browser%2F8.55.2:0

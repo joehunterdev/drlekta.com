@@ -4,7 +4,8 @@
 (function () {
   function initPlayer() {
     var wrap  = document.getElementById('video-player');
-    if (!wrap) return;
+    if (!wrap || wrap.dataset.vpInit) return;
+    wrap.dataset.vpInit = 'true';
 
     var video = document.getElementById('vp-video');
 

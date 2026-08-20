@@ -1,0 +1,504 @@
+- generic [ref=e1]:
+  - generic [ref=e226]:
+    - list [ref=e227]:
+      - listitem [ref=e228]:
+        - link [ref=e229] [cursor=pointer]:
+          - /url: https://bandcamp.com/?from=menubar_logo_logged_out
+      - listitem [ref=e232]:
+        - form "autocomplete search" [ref=e233]:
+          - textbox "Search for artist, album, or track" [ref=e234]
+          - progressbar [ref=e235]:
+            - img "loading icon" [ref=e236]
+          - button "submit for full search page" [ref=e238] [cursor=pointer]
+    - list [ref=e241]:
+      - listitem [ref=e242]:
+        - generic [ref=e243] [cursor=pointer]: sign up
+      - listitem [ref=e244]:
+        - link "log in" [ref=e245] [cursor=pointer]:
+          - /url: https://bandcamp.com/login?from=menubar
+  - generic [ref=e246]:
+    - generic [ref=e247]:
+      - list [ref=e250]:
+        - listitem [ref=e251]:
+          - link "music" [ref=e252] [cursor=pointer]:
+            - /url: /music
+        - listitem [ref=e253]:
+          - link "merch" [ref=e254] [cursor=pointer]:
+            - /url: /merch
+        - listitem [ref=e255]:
+          - link "community" [ref=e256] [cursor=pointer]:
+            - /url: /community
+      - generic [ref=e257]:
+        - generic [ref=e258]:
+          - heading "Dr Lekta & Br00tal Productions - Palm Trees & Neon Lights" [level=2] [ref=e259]
+          - heading [level=3] [ref=e260]:
+            - text: by
+            - link "Dr Lekta" [ref=e262] [cursor=pointer]:
+              - /url: https://drlekta.bandcamp.com
+        - generic [ref=e263]:
+          - link [ref=e265] [cursor=pointer]:
+            - /url: https://f4.bcbits.com/img/a2385652567_10.jpg
+          - list [ref=e270]:
+            - listitem [ref=e271]:
+              - button "Share / Embed" [ref=e274] [cursor=pointer]
+            - listitem [ref=e275]:
+              - generic "Add this track to your wishlist" [ref=e276]: Wishlist
+              - text: "-"
+          - generic [ref=e281]:
+            - generic [ref=e282]: supported by
+            - generic [ref=e284]:
+              - link [ref=e285] [cursor=pointer]:
+                - /url: https://bandcamp.com/marcfarena?from=fanthanks
+                - img "marcfarena thumbnail" [ref=e286]
+              - link [ref=e287] [cursor=pointer]:
+                - /url: https://bandcamp.com/enthusiast12?from=fanthanks
+                - img "Hip-hop Enthusiast thumbnail" [ref=e288]
+        - generic [ref=e290]:
+          - table [ref=e292]:
+            - rowgroup [ref=e293]:
+              - row [ref=e294]:
+                - cell [ref=e295]:
+                  - button "Play/pause" [ref=e296] [cursor=pointer]
+                - cell "Beneath The Palm Trees 00:00 / 02:16" [ref=e298]:
+                  - generic [ref=e299]:
+                    - link "Beneath The Palm Trees" [ref=e301] [cursor=pointer]:
+                      - /url: /track/beneath-the-palm-trees
+                    - generic [ref=e302]: 00:00 / 02:16
+              - row [ref=e303]:
+                - cell [ref=e304]:
+                  - generic [ref=e307] [cursor=pointer]
+                - cell [ref=e308]:
+                  - button "Previous track" [ref=e309] [cursor=pointer]
+                - cell [ref=e311]:
+                  - button "Next track" [ref=e312] [cursor=pointer]
+          - list [ref=e314]:
+            - listitem [ref=e315]:
+              - heading "Digital Album Streaming + Download" [level=3] [ref=e316]:
+                - button "Digital Album" [ref=e317] [cursor=pointer]
+                - generic [ref=e318]: Streaming + Download
+              - generic [ref=e319]: Includes unlimited streaming via the free Bandcamp app, plus high-quality download in MP3, FLAC and more.
+              - generic [ref=e320]: Download available in 16-bit/44.1kHz.
+              - generic [ref=e321]:
+                - heading "Buy Digital Album £5 GBP or more" [level=4] [ref=e322]:
+                  - button "Buy Digital Album" [ref=e323] [cursor=pointer]
+                  - generic [ref=e324]:
+                    - generic [ref=e325]: £5
+                    - generic [ref=e326]: GBP
+                    - generic [ref=e327]: or more
+                - heading [level=4] [ref=e328]:
+                  - button "Send as Gift" [ref=e329] [cursor=pointer]
+          - table [ref=e330]:
+            - rowgroup [ref=e331]:
+              - row [ref=e332]:
+                - cell [ref=e333]:
+                  - button "Play Beneath The Palm Trees" [ref=e334] [cursor=pointer]
+                - cell "1." [ref=e336]
+                - cell [ref=e338]:
+                  - generic [ref=e339]:
+                    - link "Beneath The Palm Trees" [ref=e340] [cursor=pointer]:
+                      - /url: /track/beneath-the-palm-trees
+                    - text: 02:16
+                - cell [ref=e341]
+                - cell [ref=e342]
+              - row [ref=e343]:
+                - cell [ref=e344]:
+                  - button "Play Neon Lights Feat Mademelo" [ref=e345] [cursor=pointer]
+                - cell "2." [ref=e347]
+                - cell [ref=e349]:
+                  - generic [ref=e350]:
+                    - link "Neon Lights Feat Mademelo" [ref=e351] [cursor=pointer]:
+                      - /url: /track/neon-lights-feat-mademelo
+                    - text: 02:38
+                - cell [ref=e352]
+                - cell [ref=e353]
+              - row [ref=e354]:
+                - cell [ref=e355]:
+                  - button "Play Club Legacy" [ref=e356] [cursor=pointer]
+                - cell "3." [ref=e358]
+                - cell [ref=e360]:
+                  - generic [ref=e361]:
+                    - link "Club Legacy" [ref=e362] [cursor=pointer]:
+                      - /url: /track/club-legacy
+                    - text: 02:30
+                - cell [ref=e363]
+                - cell [ref=e364]
+              - row [ref=e365]:
+                - cell [ref=e366]:
+                  - button "Play The Chase Feat Tha Krimzun Chin" [ref=e367] [cursor=pointer]
+                - cell "4." [ref=e369]
+                - cell [ref=e371]:
+                  - generic [ref=e372]:
+                    - link "The Chase Feat Tha Krimzun Chin" [ref=e373] [cursor=pointer]:
+                      - /url: /track/the-chase-feat-tha-krimzun-chin
+                    - text: 03:04
+                - cell [ref=e374]
+                - cell [ref=e375]
+              - row [ref=e376]:
+                - cell [ref=e377]:
+                  - button "Play I Know You Know" [ref=e378] [cursor=pointer]
+                - cell "5." [ref=e380]
+                - cell [ref=e382]:
+                  - generic [ref=e383]:
+                    - link "I Know You Know" [ref=e384] [cursor=pointer]:
+                      - /url: /track/i-know-you-know
+                    - text: 02:21
+                - cell [ref=e385]
+                - cell [ref=e386]
+              - row [ref=e387]:
+                - cell [ref=e388]:
+                  - button "Play Putting In Work Feat Boldy James" [ref=e389] [cursor=pointer]
+                - cell "6." [ref=e391]
+                - cell [ref=e393]:
+                  - generic [ref=e394]:
+                    - link "Putting In Work Feat Boldy James" [ref=e395] [cursor=pointer]:
+                      - /url: /track/putting-in-work-feat-boldy-james
+                    - text: 02:08
+                - cell [ref=e396]
+                - cell [ref=e397]
+              - row [ref=e398]:
+                - cell [ref=e399]:
+                  - button "Play Leave Them With A Broken Spirit Feat Soulogik" [ref=e400] [cursor=pointer]
+                - cell "7." [ref=e402]
+                - cell [ref=e404]:
+                  - generic [ref=e405]:
+                    - link "Leave Them With A Broken Spirit Feat Soulogik" [ref=e406] [cursor=pointer]:
+                      - /url: /track/leave-them-with-a-broken-spirit-feat-soulogik
+                    - text: 02:53
+                - cell [ref=e407]
+                - cell [ref=e408]
+              - row [ref=e409]:
+                - cell [ref=e410]:
+                  - button "Play Cruising Feat Prefects" [ref=e411] [cursor=pointer]
+                - cell "8." [ref=e413]
+                - cell [ref=e415]:
+                  - generic [ref=e416]:
+                    - link "Cruising Feat Prefects" [ref=e417] [cursor=pointer]:
+                      - /url: /track/cruising-feat-prefects
+                    - text: 02:04
+                - cell [ref=e418]
+                - cell [ref=e419]
+              - row [ref=e420]:
+                - cell [ref=e421]:
+                  - button "Play The Conclusion" [ref=e422] [cursor=pointer]
+                - cell "9." [ref=e424]
+                - cell [ref=e426]:
+                  - generic [ref=e427]:
+                    - link "The Conclusion" [ref=e428] [cursor=pointer]:
+                      - /url: /track/the-conclusion
+                    - text: 02:32
+                - cell [ref=e429]
+                - cell [ref=e430]
+          - heading "about" [level=3] [ref=e431]
+          - generic [ref=e432]: Lekta ends up in 80s Miami causing absolute bedlam accompanied by the smooth production of Miami producers Br00tal Productions!!
+          - heading "credits" [level=3] [ref=e433]
+          - generic [ref=e434]: released August 14, 2026 Produced, Mixed & Mastered By Br00tal Productions Artwork by Dr Lekta
+          - heading "license" [level=3] [ref=e435]
+          - generic [ref=e436]: all rights reserved
+        - heading "tags" [level=3] [ref=e438]
+        - generic [ref=e439]:
+          - heading "Tags" [level=3] [ref=e440]
+          - link "boldy james" [ref=e441] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/boldy-james?from=tralbum&artist=4075301350
+          - link "hip hop" [ref=e442] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/hip-hop?from=tralbum&artist=4075301350
+          - link "hip-hop/rap" [ref=e443] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/hip-hop-rap?from=tralbum&artist=4075301350
+          - link "rap" [ref=e444] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/rap?from=tralbum&artist=4075301350
+          - link "boom bap" [ref=e445] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/boom-bap?from=tralbum&artist=4075301350
+          - link "conscious hip hop" [ref=e446] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/conscious-hip-hop?from=tralbum&artist=4075301350
+          - link "griselda" [ref=e447] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/griselda?from=tralbum&artist=4075301350
+          - link "hardcore" [ref=e448] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/hardcore?from=tralbum&artist=4075301350
+          - link "hip hop" [ref=e449] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/hip-hop?from=tralbum&artist=4075301350
+          - link "underground hip hop" [ref=e450] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/underground-hip-hop?from=tralbum&artist=4075301350
+          - link "United Kingdom" [ref=e451] [cursor=pointer]:
+            - /url: https://bandcamp.com/discover/united-kingdom?from=tralbum&artist=4075301350
+      - generic [ref=e452]:
+        - generic [ref=e453]:
+          - heading "about" [level=3] [ref=e454]
+          - link [ref=e457] [cursor=pointer]:
+            - /url: https://f4.bcbits.com/img/0026869772_10.jpg
+            - img "Dr Lekta image" [ref=e458]
+          - paragraph [ref=e459]:
+            - generic [ref=e460]: Dr Lekta
+            - generic [ref=e461]: UK
+          - button "Follow" [ref=e464] [cursor=pointer]
+          - list [ref=e466]:
+            - listitem [ref=e467]:
+              - link "Instagram" [ref=e468] [cursor=pointer]:
+                - /url: https://www.instagram.com/drlekta_hiphop/
+        - generic [ref=e469]:
+          - heading [level=3] [ref=e470]:
+            - link "discography" [ref=e471] [cursor=pointer]:
+              - /url: /music
+          - list [ref=e472]:
+            - listitem [ref=e473]:
+              - link [ref=e475] [cursor=pointer]:
+                - /url: /album/dr-lekta-br00tal-productions-palm-trees-neon-lights
+              - link "Dr Lekta & Br00tal Productions - Palm Trees & Neon Lights" [ref=e478] [cursor=pointer]:
+                - /url: /album/dr-lekta-br00tal-productions-palm-trees-neon-lights
+              - generic [ref=e479]: Aug 2026
+            - listitem [ref=e480]:
+              - link [ref=e482] [cursor=pointer]:
+                - /url: /track/whispers-feat-soulogik-prod-by-statik-selektah
+              - link "Whispers Feat Soulogik Prod By Statik Selektah" [ref=e485] [cursor=pointer]:
+                - /url: /track/whispers-feat-soulogik-prod-by-statik-selektah
+              - generic [ref=e486]: Jul 2026
+            - listitem [ref=e487]:
+              - link [ref=e489] [cursor=pointer]:
+                - /url: /album/dr-lekta-cross-uk-pay-homage
+              - link "Dr Lekta & Cross UK - Pay Homage" [ref=e492] [cursor=pointer]:
+                - /url: /album/dr-lekta-cross-uk-pay-homage
+              - generic [ref=e493]: May 2026
+          - link "more releases..." [ref=e495] [cursor=pointer]:
+            - /url: /music
+        - heading "contact / help" [level=3] [ref=e496]
+        - paragraph [ref=e497]:
+          - link "Contact Dr Lekta" [ref=e498] [cursor=pointer]:
+            - /url: /contact?b=4075301350&n=Dr%20Lekta
+        - paragraph [ref=e499]:
+          - link "Streaming and Download help" [ref=e500] [cursor=pointer]:
+            - /url: https://bandcamp.com/help/downloading?from=tralbum_downloading
+        - paragraph [ref=e501]:
+          - link "Shipping and returns" [ref=e502] [cursor=pointer]:
+            - /url: https://drlekta.bandcamp.com/policies
+        - paragraph [ref=e503]: Report this album or account
+    - generic [ref=e508]:
+      - paragraph [ref=e509]: "If you like Dr Lekta, you may also like:"
+      - list [ref=e510]:
+        - listitem [ref=e511]:
+          - generic [ref=e512]:
+            - img [ref=e514] [cursor=pointer]
+            - generic [ref=e515] [cursor=pointer]
+          - paragraph [ref=e517]:
+            - link "Paved With Good Intentions by SolarFive and Custom Made" [ref=e518] [cursor=pointer]:
+              - /url: https://solarfive.bandcamp.com/album/paved-with-good-intentions?from=footer-aotd-a3080951029
+              - text: Paved With Good Intentionsby SolarFive and Custom Made
+          - generic [ref=e519]:
+            - paragraph [ref=e520]:
+              - text: Another rumination on mortality from the Chicago rapper, delivered with dexterity and optimism.
+              - generic [ref=e521]:
+                - text: Bandcamp Album of the Day
+                - generic [ref=e522]: Apr 25, 2023
+            - link "go to album" [ref=e523] [cursor=pointer]:
+              - /url: https://solarfive.bandcamp.com/album/paved-with-good-intentions?from=footer-aotd-a3080951029
+        - listitem [ref=e524]:
+          - generic [ref=e525]:
+            - img [ref=e527] [cursor=pointer]
+            - generic [ref=e528] [cursor=pointer]
+          - paragraph [ref=e530]:
+            - link "The Price of Bread by NE$$, Baby J" [ref=e531] [cursor=pointer]:
+              - /url: https://nessxbabyj.bandcamp.com/album/the-price-of-bread?from=footer-bcw-a3080951029
+              - text: The Price of Breadby NE$$, Baby J
+          - generic [ref=e532]:
+            - paragraph [ref=e533]:
+              - text: featured on Bandcamp Radio
+              - generic [ref=e534]: Nov 2, 2023
+            - link "go to album" [ref=e535] [cursor=pointer]:
+              - /url: https://nessxbabyj.bandcamp.com/album/the-price-of-bread?from=footer-bcw-a3080951029
+        - listitem [ref=e536]:
+          - generic [ref=e537]:
+            - img [ref=e539] [cursor=pointer]
+            - generic [ref=e540] [cursor=pointer]
+          - paragraph [ref=e542]:
+            - link "The FLY by 93Vintage" [ref=e543] [cursor=pointer]:
+              - /url: https://93vintage.bandcamp.com/album/the-fly?from=footer-bcw-a3080951029
+              - text: The FLYby 93Vintage
+          - generic [ref=e544]:
+            - paragraph [ref=e545]:
+              - text: featured on Bandcamp Radio
+              - generic [ref=e546]: May 1, 2026
+            - link "go to album" [ref=e547] [cursor=pointer]:
+              - /url: https://93vintage.bandcamp.com/album/the-fly?from=footer-bcw-a3080951029
+        - listitem [ref=e548]:
+          - generic [ref=e549]:
+            - img [ref=e551] [cursor=pointer]
+            - generic [ref=e552] [cursor=pointer]
+          - paragraph [ref=e554]:
+            - link "Run Toward The Monster by Apollo Brown & Ty Farris" [ref=e555] [cursor=pointer]:
+              - /url: https://apollobrown.bandcamp.com/album/run-toward-the-monster?from=footer-bcw-a3080951029
+              - text: Run Toward The Monsterby Apollo Brown & Ty Farris
+          - generic [ref=e556]:
+            - paragraph [ref=e557]:
+              - text: featured on Bandcamp Radio
+              - generic [ref=e558]: Nov 28, 2025
+            - link "go to album" [ref=e559] [cursor=pointer]:
+              - /url: https://apollobrown.bandcamp.com/album/run-toward-the-monster?from=footer-bcw-a3080951029
+        - listitem [ref=e560]:
+          - generic [ref=e561]:
+            - img [ref=e563] [cursor=pointer]
+            - generic [ref=e564] [cursor=pointer]
+          - paragraph [ref=e566]:
+            - link "a state of mind. by Von Intellekt" [ref=e567] [cursor=pointer]:
+              - /url: https://thefreerecordings.bandcamp.com/album/a-state-of-mind?from=footer-bcw-a3080951029
+              - text: a state of mind.by Von Intellekt
+          - generic [ref=e568]:
+            - paragraph [ref=e569]:
+              - text: featured on Bandcamp Radio
+              - generic [ref=e570]: Oct 17, 2025
+            - link "go to album" [ref=e571] [cursor=pointer]:
+              - /url: https://thefreerecordings.bandcamp.com/album/a-state-of-mind?from=footer-bcw-a3080951029
+        - listitem [ref=e572]:
+          - generic [ref=e573]:
+            - img [ref=e575] [cursor=pointer]
+            - generic [ref=e576] [cursor=pointer]
+          - paragraph [ref=e578]:
+            - link "VA FOR SALE by Childz" [ref=e579] [cursor=pointer]:
+              - /url: https://childz.bandcamp.com/album/va-for-sale?from=footer-bcw-a3080951029
+              - text: VA FOR SALEby Childz
+          - generic [ref=e580]:
+            - paragraph [ref=e581]:
+              - text: featured on Bandcamp Radio
+              - generic [ref=e582]: Oct 3, 2025
+            - link "go to album" [ref=e583] [cursor=pointer]:
+              - /url: https://childz.bandcamp.com/album/va-for-sale?from=footer-bcw-a3080951029
+        - listitem [ref=e584]:
+          - generic [ref=e585]:
+            - img [ref=e587] [cursor=pointer]
+            - generic [ref=e588] [cursor=pointer]
+          - paragraph [ref=e590]:
+            - link "Remember To Breathe by Landon Wordswell & Es-K" [ref=e591] [cursor=pointer]:
+              - /url: https://landonwordswell.bandcamp.com/album/remember-to-breathe?from=footer-bcw-a3080951029
+              - text: Remember To Breatheby Landon Wordswell & Es-K
+          - generic [ref=e592]:
+            - paragraph [ref=e593]:
+              - text: featured on Bandcamp Radio
+              - generic [ref=e594]: Sep 19, 2025
+            - link "go to album" [ref=e595] [cursor=pointer]:
+              - /url: https://landonwordswell.bandcamp.com/album/remember-to-breathe?from=footer-bcw-a3080951029
+    - contentinfo [ref=e598]:
+      - generic [ref=e599]:
+        - generic [ref=e600]:
+          - heading [level=3] [ref=e601]:
+            - link "Bandcamp Daily" [ref=e602] [cursor=pointer]:
+              - /url: https://daily.bandcamp.com/?from=footer&ui_context=editorial_recommendations
+            - text: your guide to the world of Bandcamp
+          - list [ref=e603]:
+            - listitem [ref=e604]:
+              - link [ref=e605] [cursor=pointer]:
+                - /url: https://daily.bandcamp.com/features/melaina-kol-okay-thats-great-because-if-i-do-that-then-feature?from=footer&ui_context=editorial_recommendations
+                - paragraph [ref=e607]: "Learning by Doing: Making Music as Melaina Kol"
+            - listitem [ref=e608]:
+              - link [ref=e609] [cursor=pointer]:
+                - /url: https://daily.bandcamp.com/lists/queer-country-album-guide?from=footer&ui_context=editorial_recommendations
+                - paragraph [ref=e611]: The Queer Country Revolution Rolls On
+            - listitem [ref=e612]:
+              - link [ref=e613] [cursor=pointer]:
+                - /url: https://daily.bandcamp.com/label-profile/colectivo-casa-amarela-label-profile?from=footer&ui_context=editorial_recommendations
+                - paragraph [ref=e615]: How Colectivo Casa Amarela Grew Beyond Its Island Origins
+        - generic [ref=e616]:
+          - heading "On Bandcamp Radio" [level=3] [ref=e617]
+          - generic [ref=e618]:
+            - link "Ty Segall takes over the Indie Show ahead of the release of \"Chrome.\" Dig it!" [ref=e619] [cursor=pointer]:
+              - /url: https://bandcamp.com/radio?show=975&play=1&from=footer&ui_context=editorial_recommendations
+            - generic [ref=e620]:
+              - link [ref=e621] [cursor=pointer]:
+                - /url: https://bandcamp.com/radio?show=975&play=1&from=footer&ui_context=editorial_recommendations
+                - paragraph [ref=e622]: Ty Segall takes over the Indie Show ahead of the release of "Chrome." Dig it!
+              - link "Listen now" [ref=e623] [cursor=pointer]:
+                - /url: https://bandcamp.com/radio?show=975&play=1&from=footer&ui_context=editorial_recommendations
+      - generic [ref=e626]:
+        - navigation [ref=e627]:
+          - generic [ref=e628]:
+            - list [ref=e629]:
+              - listitem [ref=e630]:
+                - link "About" [ref=e631] [cursor=pointer]:
+                  - /url: https://bandcamp.com/about?from=footer
+              - listitem [ref=e632]:
+                - link "Buttons/Logos" [ref=e633] [cursor=pointer]:
+                  - /url: https://bandcamp.com/buttons?from=footer
+              - listitem [ref=e634]:
+                - link "Bandcamp Daily" [ref=e635] [cursor=pointer]:
+                  - /url: https://daily.bandcamp.com/?from=footer
+              - listitem [ref=e636]:
+                - link "Gift Cards" [ref=e637] [cursor=pointer]:
+                  - /url: https://bandcamp.com/gift_cards?from=footer
+              - listitem [ref=e638]:
+                - link "Bandcamp Merch" [ref=e639] [cursor=pointer]:
+                  - /url: https://store.bandcamp.com/?from=footer
+              - listitem [ref=e640]:
+                - link "Help" [ref=e641] [cursor=pointer]:
+                  - /url: https://get.bandcamp.help/?from=footer
+              - listitem [ref=e642]:
+                - link "Jobs" [ref=e643] [cursor=pointer]:
+                  - /url: https://bandcamp.com/jobs?from=footer
+              - listitem [ref=e644]:
+                - link "Press" [ref=e645] [cursor=pointer]:
+                  - /url: https://bandcamp.com/about?from=footer#press
+            - generic [ref=e646]:
+              - list [ref=e647]:
+                - listitem [ref=e648]:
+                  - link "Bluesky" [ref=e649] [cursor=pointer]:
+                    - /url: https://bsky.app/profile/bandcamp.com
+                - listitem [ref=e650]:
+                  - link "Facebook" [ref=e651] [cursor=pointer]:
+                    - /url: https://www.facebook.com/Bandcamp
+                - listitem [ref=e652]:
+                  - link "Instagram" [ref=e653] [cursor=pointer]:
+                    - /url: https://www.instagram.com/bandcamp
+                - listitem [ref=e654]:
+                  - link "TikTok" [ref=e655] [cursor=pointer]:
+                    - /url: https://www.tiktok.com/@bandcamp
+              - list [ref=e656]:
+                - listitem [ref=e657]:
+                  - link "Acceptable Use & Moderation Policy" [ref=e658] [cursor=pointer]:
+                    - /url: https://get.bandcamp.help/articles/15263124-bandcamp-s-acceptable-use-and-moderation-policy?from=footer
+                - listitem [ref=e659]:
+                  - link "Fair Trade Music Policy" [ref=e660] [cursor=pointer]:
+                    - /url: https://bandcamp.com/fair_trade_music_policy?from=footer
+                - listitem [ref=e661]:
+                  - link "Copyright" [ref=e662] [cursor=pointer]:
+                    - /url: https://bandcamp.com/copyright?from=footer
+                - listitem [ref=e663]:
+                  - link "Privacy" [ref=e664] [cursor=pointer]:
+                    - /url: https://bandcamp.com/privacy?from=footer
+                - listitem [ref=e665]:
+                  - link "Terms of Use" [ref=e666] [cursor=pointer]:
+                    - /url: https://bandcamp.com/terms_of_use?from=footer
+                - listitem [ref=e667]:
+                  - dialog [ref=e669]:
+                    - heading "We care about your privacy" [level=2] [ref=e671]
+                    - generic [ref=e672]:
+                      - paragraph [ref=e673]:
+                        - text: Bandcamp uses cookies to make the site work the way you expect and to better understand how our users access the site.
+                        - generic [ref=e674]:
+                          - text: Read our
+                          - link "Privacy Policy" [ref=e675] [cursor=pointer]:
+                            - /url: https://bandcamp.com/privacy
+                          - text: to learn more about how Bandcamp uses cookies.
+                      - paragraph [ref=e676]: You can update your cookie settings at any time by clicking the “Cookie settings” link at the bottom of any Bandcamp page.
+                      - generic [ref=e677]:
+                        - button "Accept all" [ref=e678] [cursor=pointer]
+                        - button "Accept necessary only" [ref=e679] [cursor=pointer]
+                  - button "Cookie Settings" [ref=e681] [cursor=pointer]
+          - generic [ref=e682]:
+            - list [ref=e683]:
+              - listitem [ref=e684]:
+                - link "Bandcamp for Artists" [ref=e685] [cursor=pointer]:
+                  - /url: https://bandcamp.com/artists?from=footer
+              - listitem [ref=e686]:
+                - link "Bandcamp for Fans" [ref=e687] [cursor=pointer]:
+                  - /url: https://bandcamp.com/fans?from=footer
+              - listitem [ref=e688]:
+                - link "Bandcamp for Labels" [ref=e689] [cursor=pointer]:
+                  - /url: https://bandcamp.com/labels?from=footer
+            - generic [ref=e690]:
+              - paragraph [ref=e691]: "Apps:"
+              - list [ref=e692]:
+                - listitem [ref=e693]:
+                  - link "Android" [ref=e694] [cursor=pointer]:
+                    - /url: https://play.google.com/store/apps/details?id=com.bandcamp.android
+                - listitem [ref=e695]:
+                  - link "iOS" [ref=e696] [cursor=pointer]:
+                    - /url: https://itunes.apple.com/us/app/bandcamp/id706408639?mt=8
+            - generic [ref=e697]:
+              - button "Mobile View" [ref=e698] [cursor=pointer]
+              - 'button "Language: English" [ref=e700] [cursor=pointer]'
+        - link "Bandcamp home" [ref=e701] [cursor=pointer]:
+          - /url: https://bandcamp.com/?from=footer&ui_context=logo

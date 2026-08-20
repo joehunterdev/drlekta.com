@@ -8,12 +8,13 @@
   letter-spacing: 0.12em;
   color: var(--white);
   text-align: center;
-  margin: 48px 0 16px;
+  margin: 0 0 16px;
   text-transform: uppercase;
 }
 
 /* ── Player article wrapper ─────────────────────────────────── */
 .inner-article--player {
+  padding-top: 32px;
   padding-bottom: 0;
   border-bottom: 1px solid #1a1a1a;
   margin-bottom: 0;
@@ -28,7 +29,11 @@
   background: #000 url('/assets/img/pay-homage-album-cover.jpg') center center / cover no-repeat;
   overflow: hidden;
   border: 1px solid #1a1a1a;
-  cursor: url('/assets/img/cursor-keys.png') 40 10, pointer;
+  cursor: url('/assets/img/cursor-keys-128.png') 64 16, pointer;
+}
+
+.vp-wrap--palm {
+  background-image: url('/assets/img/palmtrees-neon-lights.jpg');
 }
 
 /* Dark overlay on thumbnail — add .vp-wrap--dimmed to enable */
@@ -109,7 +114,7 @@
   background: none;
   border: none;
   padding: 0;
-  cursor: none;
+  cursor: url('/assets/img/cursor-keys-128.png') 64 16, pointer;
   display: flex;
   align-items: center;
   justify-content: center;

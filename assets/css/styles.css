@@ -592,6 +592,17 @@ h1.glitch::after {
   margin-bottom: 28px;
 }
 
+.bandcamp-wrap {
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+.bandcamp-wrap iframe {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
 .featured-links {
   display: flex;
   justify-content: center;
@@ -679,6 +690,11 @@ h1.glitch::after {
   font-style: normal;
   font-size: 0.9em;
   opacity: 0.6;
+}
+
+.link-pill--sm {
+  padding: 7px 16px;
+  font-size: 0.7rem;
 }
 
 /* =========================================
@@ -861,6 +877,51 @@ h1.glitch::after {
   gap: 20px;
 }
 
+.feature-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.feature-card__content .feature-card__body {
+  text-align: left;
+  margin: 2px 0 4px;
+}
+
+.feature-card__links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* stack the row card on small screens */
+@media (max-width: 639px) {
+  .feature-card--row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 28px 22px 24px;
+  }
+
+  .feature-card--row .card-avatar {
+    margin-bottom: 4px;
+  }
+
+  .feature-card--row .feature-card__content {
+    align-items: center;
+  }
+
+  .feature-card--row .feature-card__content .feature-card__body {
+    text-align: center;
+  }
+
+  .feature-card--row .feature-card__links {
+    justify-content: center;
+  }
+}
+
 /* =========================================
    CUTOUT / PROFILE IMAGE CARD
    ========================================= */
@@ -889,6 +950,7 @@ h1.glitch::after {
   z-index: 1;
   width: 110px;
   height: 110px;
+  flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 16px;
@@ -1075,6 +1137,20 @@ h1.glitch::after {
   letter-spacing: 0.04em;
   line-height: 1;
   margin-bottom: 12px;
+  text-wrap: balance;
+}
+
+@media (min-width: 1024px) {
+  /* full width so the one-line title never overflows and stays centered */
+  .inner-hero .section-inner--narrow {
+    max-width: none;
+  }
+
+  /* sized so the full title fits on one line with the sticker in view */
+  .inner-hero-title {
+    font-size: clamp(2.8rem, 5vw, 6.5rem);
+    white-space: nowrap;
+  }
 }
 
 .inner-hero-meta {
@@ -1082,6 +1158,69 @@ h1.glitch::after {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--grey-text);
+}
+
+.inner-hero-title-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-sticker {
+  position: absolute;
+  top: -28px;
+  right: -120px;
+  width: 74px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  animation: sticker-pulse 2.2s ease-in-out infinite;
+}
+
+.hero-sticker:hover {
+  animation-play-state: paused;
+  transform: rotate(0deg) scale(1.06);
+}
+
+@keyframes sticker-pulse {
+  0%, 100% {
+    transform: rotate(12deg) scale(1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  }
+  50% {
+    transform: rotate(12deg) scale(1.08);
+    box-shadow: 0 6px 26px rgba(0,0,0,0.6), 0 0 0 8px rgba(255,255,255,0.06);
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-sticker {
+    width: 92px;
+    height: 92px;
+    top: -36px;
+    right: -120px;
+    font-size: 1.15rem;
+  }
+}
+
+/* one-line title is wider — pull the sticker in so it stays on screen */
+@media (min-width: 1024px) {
+  .hero-sticker {
+    top: -42px;
+    right: -70px;
+  }
 }
 
 /* center all h2s in inner articles */
@@ -1149,6 +1288,52 @@ h1.glitch::after {
   max-width: 320px;
   margin: 0 auto 8px;
   border: 1px solid #1e1e1e;
+}
+
+/* =========================================
+   SPLIT BLOCK (text + media side by side)
+   ========================================= */
+.split-block {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 32px 0;
+}
+
+.split-block__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.split-block__media {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+/* modifier: media on the left */
+.split-block--reverse {
+  flex-direction: row-reverse;
+}
+
+.split-block__media .album-cover {
+  max-width: 200px;
+  margin: 0;
+}
+
+@media (max-width: 680px) {
+  .split-block {
+    flex-direction: column;
+  }
+
+  .split-block__media {
+    width: 100%;
+    order: -1;
+  }
+
+  .split-block__media .album-cover {
+    max-width: 240px;
+    margin: 0 auto;
+  }
 }
 
 .tracklist {
