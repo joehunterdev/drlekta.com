@@ -1227,7 +1227,7 @@ h1.glitch::after {
 .inner-article h2 {
   text-align: center;
 }
-
+/*test*/
 .inner-article blockquote {
   border-left: 3px solid var(--white);
   margin: 40px auto;
