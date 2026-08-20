@@ -1143,6 +1143,53 @@ h1.glitch::after {
   margin-top: 48px;
 }
 
+.album-cover {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 8px;
+  border: 1px solid #1e1e1e;
+}
+
+.tracklist {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  padding: 0;
+  list-style: none;
+  counter-reset: track;
+  text-align: left;
+}
+
+.tracklist li {
+  counter-increment: track;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #1a1a1a;
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+.tracklist li::before {
+  content: counter(track, decimal-leading-zero);
+  color: var(--grey-text);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.tracklist li strong {
+  color: var(--white);
+  font-weight: 500;
+  flex: 1;
+}
+
+.tracklist-time {
+  color: var(--grey-text);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
 /* =========================================
    FOOTER
    ========================================= */
