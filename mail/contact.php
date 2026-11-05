@@ -203,9 +203,8 @@ if ($tracks !== '' && (filter_var($tracks, FILTER_VALIDATE_INT, ['options' => ['
 if ($link !== '' && (!filter_var($link, FILTER_VALIDATE_URL) || !preg_match('#^https?://#i', $link))) {
     $errors['link'] = 'Links should start with http:// or https://';
 }
-if (mb_strlen($message) < 20) {
-    $errors['message'] = 'Tell us a little more about your project (20 characters minimum).';
-} elseif (preg_match_all('#https?://#i', $message) > 3) {
+// message is optional — only guard against link spam
+if (preg_match_all('#https?://#i', $message) > 3) {
     $errors['message'] = 'Too many links in the message — use the link field for your music.';
 }
 
@@ -234,7 +233,7 @@ $rows = [
 
 $text = "New Mixing & Mastering enquiry from drlekta.com\n\n";
 foreach ($rows as $k => $v) $text .= str_pad($k . ':', 14) . $v . "\n";
-$text .= "\nMessage:\n" . $message . "\n";
+$text .= "\nMessage:\n" . ($message ?: '—') . "\n";
 
 $e = fn(string $s) => htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 $html = '<h2 style="font-family:Arial,sans-serif">New Mixing &amp; Mastering enquiry</h2>'
@@ -243,7 +242,7 @@ foreach ($rows as $k => $v) {
     $html .= '<tr><td style="color:#666;vertical-align:top"><strong>' . $e($k) . '</strong></td><td>' . $e($v) . '</td></tr>';
 }
 $html .= '</table><p style="font-family:Arial,sans-serif;font-size:14px"><strong>Message</strong><br>'
-       . nl2br($e($message)) . '</p>';
+       . nl2br($e($message ?: "—")) . '</p>';
 
 $mail = new PHPMailer(true);
 try {

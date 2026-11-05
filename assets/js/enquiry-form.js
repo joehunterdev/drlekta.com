@@ -45,7 +45,6 @@
     if (v('name').length < 2) e.name = 'Please tell us your name.';
     if (!form.elements.email.checkValidity() || !v('email')) e.email = 'Please enter a valid email address.';
     if (v('link') && !/^https?:\/\//i.test(v('link'))) e.link = 'Links should start with http:// or https://';
-    if (v('message').length < 20) e.message = 'Tell us a little more about your project (20 characters minimum).';
     return e;
   }
 
