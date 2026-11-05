@@ -10,8 +10,7 @@ assets/video/
 # …except images the code depends on
 !assets/img/hero-overlay-mixing-mastering.webp
 
-# Mail handler — secrets & runtime data
-mail/config.php
+# Mail handler — runtime data (config.php is committed)
 mail/storage/*
 !mail/storage/.htaccess
 
