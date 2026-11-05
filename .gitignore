@@ -8,6 +8,11 @@
 assets/img/
 assets/video/
 
+# Mail handler — secrets & runtime data
+mail/config.php
+mail/storage/*
+!mail/storage/.htaccess
+
 # OS
 Thumbs.db
 .DS_Store

@@ -4,6 +4,7 @@
   // Map pathname prefixes to nav data-nav values
   var navMap = [
     { match: /^\/blog\//, key: 'blog' },
+    { match: /^\/services\//, key: 'services' },
     { match: /^\/$/, key: 'home' }
   ];
 

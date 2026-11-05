@@ -28,7 +28,6 @@
   aspect-ratio: 16 / 9;
   background: #000 url('/assets/img/pay-homage-album-cover.jpg') center center / cover no-repeat;
   overflow: hidden;
-  border: 1px solid #1a1a1a;
   cursor: url('/assets/img/cursor-keys-128.png') 64 16, pointer;
 }
 

@@ -1,0 +1,11 @@
+# Only the form endpoint is reachable from the web.
+# (nginx hosts: replicate with `location /mail/ { deny all; }` + allow contact.php)
+Options -Indexes
+
+<FilesMatch ".*">
+  Require all denied
+</FilesMatch>
+
+<Files "contact.php">
+  Require all granted
+</Files>

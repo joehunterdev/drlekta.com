@@ -191,23 +191,35 @@
     padding: 8px 0 16px;
   }
 
+  /* body is text-align:center — keep the mobile menu left-aligned */
+  .nav-links,
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+  }
+
   .nav-link {
     padding: 12px 24px;
     width: 100%;
   }
 
+  /* sub-items sit indented under their parent with a guide line */
   .nav-dropdown {
     position: static;
     border: none;
+    border-left: 1px solid #2a2a2a;
     background: transparent;
     opacity: 1;
     visibility: visible;
     transform: none;
-    padding: 0 0 0 16px;
+    min-width: 0;
+    margin: 0 0 6px 24px;
+    padding: 0;
   }
 
   .nav-dropdown li a {
-    padding: 8px 24px;
+    padding: 7px 16px;
+    font-size: 0.66rem;
   }
 
   /* sub-pages: nav stays within flow so content below it naturally */
@@ -366,11 +378,11 @@ h2 {
    HERO
    ========================================= */
 .hero {
-  min-height: 70vh;
+  min-height: 0; /* hug the content — 70vh left a big gap under the buttons on mobile */
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 120px 20px 40px;
+  padding: 100px 20px 64px;
   background: var(--black);
   position: relative;
 }
@@ -392,6 +404,9 @@ h2 {
   height: 200px;
   background: linear-gradient(to bottom, transparent, var(--black));
   pointer-events: none;
+  /* sit behind the content so it never dims the buttons
+     (no z-index on .hero-inner — that would break the video-text blend) */
+  z-index: -1;
 }
 
 .hero-inner {
@@ -1519,4 +1534,412 @@ h1.glitch::after {
 /* flip the video vertically — add data-video-bg-flip to the section */
 [data-video-bg-flip] .section-video-bg {
   transform: scaleY(-1);
+}
+/* =========================================
+   SERVICES — 2-col content + enquiry form
+   ========================================= */
+.service-layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.inner-article .service-lead {
+  font-size: 1.15rem;
+  color: var(--white);
+  line-height: 1.7;
+}
+
+.service-steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0 0 24px;
+  padding: 0;
+  max-width: 640px;
+}
+
+.service-steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 14px 0 14px 44px;
+  border-bottom: 1px solid #1a1a1a;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+.service-steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 14px;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: var(--grey-text);
+}
+
+.service-content blockquote {
+  margin-left: 0;
+  text-align: left;
+}
+
+.service-aside {
+  scroll-margin-top: 80px;
+}
+
+.service-steps a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.service-form-card {
+  align-items: stretch;
+  text-align: left;
+  padding: 32px 28px 28px;
+}
+
+.service-form-card .feature-card__label {
+  text-align: center;
+}
+
+.inner-article .service-form-title {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+/* ── form ── */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.form-field label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 11px 12px;
+  background: var(--black);
+  border: 1px solid #2a2a2a;
+  border-radius: 0;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  transition: border-color 0.2s ease;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+.form-field ::placeholder {
+  color: #555;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--white);
+}
+
+.form-field [aria-invalid="true"] {
+  border-color: #ff5c5c;
+}
+
+.form-error {
+  font-size: 0.75rem;
+  color: #ff5c5c;
+  line-height: 1.4;
+}
+
+.form-error:empty {
+  display: none;
+}
+
+/* honeypot — off-screen rather than display:none (some bots skip hidden fields) */
+.form-hp {
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-submit {
+  margin-top: 4px;
+  width: 100%;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.inner-article .form-status {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.inner-article .form-status.is-success { color: var(--white); }
+.inner-article .form-status.is-error   { color: #ff5c5c; }
+
+/* ── FAQ ── */
+.service-faq {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.service-faq details {
+  border-bottom: 1px solid #1a1a1a;
+  padding: 4px 0;
+}
+
+.service-faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 32px 14px 0;
+  position: relative;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.service-faq summary::-webkit-details-marker { display: none; }
+
+.service-faq summary::after {
+  content: '+';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--grey-text);
+  transition: transform 0.2s ease;
+}
+
+.service-faq details[open] summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.service-faq details p {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .service-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* mobile: form first, info after */
+  .service-aside {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .service-form-card {
+    padding: 26px 18px 22px;
+  }
+}
+
+/* =========================================
+   HOMEPAGE — SERVICES HERO (Mixing & Mastering)
+   Full-width video bg (same as .connect) + illustration overlay.
+   Mobile-first: art stacks under the text; wide screens pin it
+   bottom-left, oversized so the hood breaks out over the top.
+   ========================================= */
+.services-hero {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  padding: 80px 20px 0;
+  min-height: 390px; /* matches the Follow section */
+}
+
+.services-hero .section-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.services-hero h2 {
+  margin-bottom: 28px;
+}
+
+.services-hero__art {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 24px auto 0;
+}
+
+.services-hero__art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* the PNG has ~6.7% transparent space under the desk — push it below the edge */
+  transform: translateY(6.7%);
+  margin-top: -6.7%;
+  transition: transform 0.5s ease;
+  transform-origin: center bottom;
+}
+
+.services-hero__art:hover img {
+  transform: translateY(6.7%) scale(1.015);
+}
+
+@media (min-width: 1281px) {
+  /* let the hood pop out above the section; the video still fills it exactly */
+  .services-hero {
+    overflow: visible;
+    padding-bottom: 80px;
+  }
+
+  /* text moves to the right-hand side */
+  .services-hero .section-inner {
+    width: 42%;
+    max-width: none;
+    margin: 0 2vw 0 auto;
+  }
+
+  .services-hero__art {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  /* taller than the 390px section so the head breaks out over the top */
+  .services-hero__art img {
+    width: auto;
+    height: clamp(360px, 26vw, 540px);
+    margin-top: 0;
+  }
+}
+/* =========================================
+   HOMEPAGE — COMING SOON (3 cols, text section like .bio)
+   ========================================= */
+.coming-soon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  text-align: left;
+}
+
+.coming-soon-item {
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}
+
+.coming-soon-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--grey-text);
+  margin-bottom: 6px;
+}
+
+.coming-soon-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.coming-soon .bio-text {
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .coming-soon-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* services page — left half of the hero illustration, mirrored, top of the left column */
+.service-art {
+  overflow: hidden;
+  aspect-ratio: 990 / 793; /* left half of the 1983×793 PNG */
+  width: 100%;
+  margin-bottom: 32px;
+  transform: scaleX(-1);
+}
+
+.service-art img {
+  display: block;
+  width: 200%;
+  max-width: none;
+  height: auto;
+}
+
+/* blog articles with a video player — on desktop the body text
+   matches the 1100px video width instead of the 640px narrow column */
+@media (min-width: 1024px) {
+  .inner-article--player ~ .inner-article .section-inner--narrow {
+    max-width: 1100px;
+  }
+
+  .inner-article--player ~ .inner-article p {
+    max-width: none;
+  }
 }
