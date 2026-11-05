@@ -5,8 +5,10 @@
 **/.private/
 
 # Media assets (images & video — managed outside git)
-assets/img/
+assets/img/*
 assets/video/
+# …except images the code depends on
+!assets/img/hero-overlay-mixing-mastering.webp
 
 # Mail handler — secrets & runtime data
 mail/config.php
