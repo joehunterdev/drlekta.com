@@ -1943,3 +1943,16 @@ h1.glitch::after {
     max-width: none;
   }
 }
+
+/* embed (e.g. Spotify) inside a row feature card */
+.feature-card__embed {
+  width: 100%;
+  margin: 4px 0 6px;
+}
+
+.feature-card__embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+}
